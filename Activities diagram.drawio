@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="m-smuQZ3tWp5vd1Wv-vX" name="Page-1">
-        <mxGraphModel dx="1117" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1211" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -167,16 +167,13 @@
                 <mxCell id="07s2pkMZrE9FU4j_POgc-34" value="Thêm mục mới" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="370" y="760" width="140" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="07s2pkMZrE9FU4j_POgc-36" value="State" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#FFFFFF;" parent="1" vertex="1">
-                    <mxGeometry x="580" y="1038" width="140" height="40" as="geometry"/>
-                </mxCell>
                 <mxCell id="07s2pkMZrE9FU4j_POgc-39" value="Ấn vào nút thêm mục mới" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" connectable="0" vertex="1">
                     <mxGeometry x="439.9981818181819" y="720" as="geometry"/>
                 </mxCell>
                 <mxCell id="07s2pkMZrE9FU4j_POgc-40" value="Ấn vào nút chỉnh sửa" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" connectable="0" vertex="1">
                     <mxGeometry x="279.9981818181819" y="760" as="geometry"/>
                 </mxCell>
-                <mxCell id="kROlDfm4qN2trWCmuW8O-1" value="Nhấn nút Schedule" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;" vertex="1" parent="1">
+                <mxCell id="kROlDfm4qN2trWCmuW8O-1" value="Nhấn nút Schedule" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;" parent="1" vertex="1">
                     <mxGeometry x="370" y="280" width="140" height="40" as="geometry"/>
                 </mxCell>
             </root>
