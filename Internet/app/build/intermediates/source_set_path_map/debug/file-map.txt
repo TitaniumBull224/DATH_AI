@@ -36,10 +36,10 @@ com.example.internet.app-navigation-runtime-2.5.2-34 C:\Users\NITRO 5\.gradle\ca
 com.example.internet.app-recyclerview-1.1.0-35 C:\Users\NITRO 5\.gradle\caches\transforms-3\f8923793e3608f6a5a596c1f8cf29eeb\transformed\recyclerview-1.1.0\res
 com.example.internet.app-lifecycle-runtime-2.5.1-36 C:\Users\NITRO 5\.gradle\caches\transforms-3\f9e562b23f4f422ee14ad962f2b498de\transformed\lifecycle-runtime-2.5.1\res
 com.example.internet.app-fragment-1.5.2-37 C:\Users\NITRO 5\.gradle\caches\transforms-3\ff3b52c30504c55350e2fa4b14c8f2ae\transformed\fragment-1.5.2\res
-com.example.internet.app-pngs-38 D:\Class work\HK222\AI\Internet\app\build\generated\res\pngs\debug
-com.example.internet.app-resValues-39 D:\Class work\HK222\AI\Internet\app\build\generated\res\resValues\debug
-com.example.internet.app-packageDebugResources-40 D:\Class work\HK222\AI\Internet\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.internet.app-packageDebugResources-41 D:\Class work\HK222\AI\Internet\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.internet.app-merged_res-42 D:\Class work\HK222\AI\Internet\app\build\intermediates\merged_res\debug
-com.example.internet.app-debug-43 D:\Class work\HK222\AI\Internet\app\src\debug\res
-com.example.internet.app-main-44 D:\Class work\HK222\AI\Internet\app\src\main\res
+com.example.internet.app-pngs-38 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\build\generated\res\pngs\debug
+com.example.internet.app-resValues-39 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\build\generated\res\resValues\debug
+com.example.internet.app-packageDebugResources-40 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.internet.app-packageDebugResources-41 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.internet.app-merged_res-42 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\build\intermediates\merged_res\debug
+com.example.internet.app-debug-43 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\src\debug\res
+com.example.internet.app-main-44 D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\src\main\res

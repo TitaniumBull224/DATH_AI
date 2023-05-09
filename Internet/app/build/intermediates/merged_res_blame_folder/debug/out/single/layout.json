@@ -1,23 +1,19 @@
 [
     {
-        "merged": "com.example.internet.app-mergeDebugResources-41:/layout/fragment_dashboard.xml",
-        "source": "com.example.internet.app-main-44:/layout/fragment_dashboard.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-41:/layout/activity_login.xml",
+        "source": "com.example.internet.app-main-44:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-mergeDebugResources-41:\\layout\\fragment_home.xml",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-41:/layout/fragment_home.xml",
-        "source": "com.example.internet.app-main-44:/layout/fragment_home.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-41:/layout/activity_signup.xml",
+        "source": "com.example.internet.app-main-44:/layout/activity_signup.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-mergeDebugResources-41:\\layout\\activity_main.xml",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "com.example.internet.app-mergeDebugResources-41:/layout/fragment_notifications.xml",
-        "source": "com.example.internet.app-main-44:/layout/fragment_notifications.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-mergeDebugResources-41:\\layout\\fragment_dashboard.xml",

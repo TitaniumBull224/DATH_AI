@@ -1,15 +1,7 @@
 [
     {
-        "merged": "com.example.internet.app-merged_res-42:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.example.internet.app-main-44:/menu/bottom_nav_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.internet.app-merged_res-42:/layout_fragment_home.xml.flat",
-        "source": "com.example.internet.app-main-44:/layout/fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -26,10 +18,6 @@
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\navigation_mobile_navigation.xml.flat",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\navigation\\mobile_navigation.xml"
-    },
-    {
-        "merged": "com.example.internet.app-merged_res-42:/layout_fragment_notifications.xml.flat",
-        "source": "com.example.internet.app-main-44:/layout/fragment_notifications.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -60,8 +48,8 @@
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.internet.app-merged_res-42:/layout_fragment_dashboard.xml.flat",
-        "source": "com.example.internet.app-main-44:/layout/fragment_dashboard.xml"
+        "merged": "com.example.internet.app-merged_res-42:/layout_activity_signup.xml.flat",
+        "source": "com.example.internet.app-main-44:/layout/activity_signup.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -74,6 +62,10 @@
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-44:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.internet.app-merged_res-42:/layout_activity_login.xml.flat",
+        "source": "com.example.internet.app-main-44:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-42:\\drawable_ic_launcher_background.xml.flat",
