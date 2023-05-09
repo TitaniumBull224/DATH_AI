@@ -77,13 +77,16 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
-    "last_opened_file_path": "D:/Program/XAMPP/htdocs/DATH_AI/Internet/app/src/main/java/com/example/internet"
+    "last_opened_file_path": "D:/Program/XAMPP/htdocs/DATH_AI/AIprg1"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\src\main\java\com\example\internet" />
       <recent name="D:\Program\XAMPP\htdocs\DATH_AI\Internet\app\src\main\res\layout" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.internet" />
     </key>
   </component>
   <component name="RunManager">

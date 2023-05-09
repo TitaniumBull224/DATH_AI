@@ -328,13 +328,17 @@ attr collapsingToolbarLayoutStyle
 attr color
 attr colorAccent
 attr colorBackgroundFloating
+attr colorBorder
 attr colorButtonNormal
 attr colorContainer
 attr colorControlActivated
 attr colorControlHighlight
 attr colorControlNormal
+attr colorDisabled
 attr colorError
 attr colorErrorContainer
+attr colorOff
+attr colorOn
 attr colorOnBackground
 attr colorOnContainer
 attr colorOnContainerUnchecked
@@ -941,6 +945,7 @@ attr nullable
 attr number
 attr numericModifiers
 attr offsetAlignmentMode
+attr on
 attr onCross
 attr onHide
 attr onNegativeCross
@@ -1226,6 +1231,8 @@ attr textInputOutlinedExposedDropdownMenuStyle
 attr textInputOutlinedStyle
 attr textInputStyle
 attr textLocale
+attr textOff
+attr textOn
 attr textOutlineColor
 attr textOutlineThickness
 attr textPanX
@@ -1394,6 +1401,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
 color cyan
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
@@ -2194,6 +2202,8 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
+dimen day_night_default_height
+dimen day_night_default_width
 dimen def_drawer_elevation
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
@@ -2258,6 +2268,8 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen labeled_default_height
+dimen labeled_default_width
 dimen m3_alert_dialog_action_bottom_padding
 dimen m3_alert_dialog_action_top_padding
 dimen m3_alert_dialog_corner_size
@@ -3245,6 +3257,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fanBtn
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3296,6 +3309,7 @@ id layout
 id left
 id leftToRight
 id legacy
+id ligBtn
 id line1
 id line3
 id linear
@@ -3560,6 +3574,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtHum
+id txtLig
+id txtTem
 id unchecked
 id uniform
 id unlabeled
@@ -5211,6 +5228,7 @@ styleable TextEffects android_textSize android_typeface android_textStyle androi
 styleable TextInputEditText textInputLayoutFocusedRectEnabled
 styleable TextInputLayout android_enabled android_textColorHint android_maxWidth android_minWidth android_hint android_maxEms android_minEms boxBackgroundColor boxBackgroundMode boxCollapsedPaddingTop boxCornerRadiusBottomEnd boxCornerRadiusBottomStart boxCornerRadiusTopEnd boxCornerRadiusTopStart boxStrokeColor boxStrokeErrorColor boxStrokeWidth boxStrokeWidthFocused counterEnabled counterMaxLength counterOverflowTextAppearance counterOverflowTextColor counterTextAppearance counterTextColor endIconCheckable endIconContentDescription endIconDrawable endIconMinSize endIconMode endIconScaleType endIconTint endIconTintMode errorAccessibilityLiveRegion errorContentDescription errorEnabled errorIconDrawable errorIconTint errorIconTintMode errorTextAppearance errorTextColor expandedHintEnabled helperText helperTextEnabled helperTextTextAppearance helperTextTextColor hintAnimationEnabled hintEnabled hintTextAppearance hintTextColor passwordToggleContentDescription passwordToggleDrawable passwordToggleEnabled passwordToggleTint passwordToggleTintMode placeholderText placeholderTextAppearance placeholderTextColor prefixText prefixTextAppearance prefixTextColor shapeAppearance shapeAppearanceOverlay startIconCheckable startIconContentDescription startIconDrawable startIconMinSize startIconScaleType startIconTint startIconTintMode suffixText suffixTextAppearance suffixTextColor
 styleable ThemeEnforcement android_textAppearance enforceMaterialTheme enforceTextAppearance
+styleable Toggle android_enabled android_textSize colorBorder colorDisabled colorOff colorOn on textOff textOn
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight menu navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor
 styleable Tooltip android_textAppearance android_textColor android_padding android_layout_margin android_minWidth android_minHeight android_text backgroundTint
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation transformPivotTarget

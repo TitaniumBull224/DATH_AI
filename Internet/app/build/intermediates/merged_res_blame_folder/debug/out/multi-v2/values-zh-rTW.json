@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.internet.app-mergeDebugResources-40:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.internet.app-mergeDebugResources-41:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\NITRO 5\\.gradle\\caches\\transforms-3\\e823a5dda738fb7207ec40a9ecdd8129\\transformed\\appcompat-1.6.1\\res\\values-zh-rTW\\values-zh-rTW.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.internet.app-mergeDebugResources-40:/values-kn/values-kn.xml",
+            "outputFile": "com.example.internet.app-mergeDebugResources-41:/values-kn/values-kn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\NITRO 5\\.gradle\\caches\\transforms-3\\2d36cdbeb90dfdfd402f076bef064238\\transformed\\core-1.9.0\\res\\values-kn\\values-kn.xml",

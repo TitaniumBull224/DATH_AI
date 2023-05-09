@@ -12,6 +12,10 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.internet.databinding.FragmentDashboardBinding;
 
+import com.github.angads25.toggle.interfaces.OnToggledListener;
+import com.github.angads25.toggle.model.ToggleableView;
+import com.github.angads25.toggle.widget.LabeledSwitch;
+
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;

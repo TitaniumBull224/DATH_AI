@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.internet.app-mergeDebugResources-40:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.example.internet.app-mergeDebugResources-41:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "C:\\Users\\NITRO 5\\.gradle\\caches\\transforms-3\\3dd3245664560002a0aa9dd396c5311c\\transformed\\material-1.9.0\\res\\values-en-rGB\\values-en-rGB.xml",
