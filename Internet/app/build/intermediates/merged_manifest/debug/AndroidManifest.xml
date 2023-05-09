@@ -28,9 +28,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.Internet" >
         <activity
+            android:name="com.example.internet.SignupActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.internet.MainActivity"
-            android:exported="true"
-            android:label="@string/app_name" >
+            android:exported="false"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.internet.LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
