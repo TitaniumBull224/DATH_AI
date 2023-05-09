@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.logsignsqlpractice.databinding.ActivitySignupBinding;
+import com.example.iotai.databinding.ActivitySignupBinding;
 
 public class SignupActivity extends AppCompatActivity {
 
