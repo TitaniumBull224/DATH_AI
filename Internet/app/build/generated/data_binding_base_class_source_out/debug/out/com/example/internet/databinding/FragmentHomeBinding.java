@@ -4,6 +4,7 @@ package com.example.internet.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +21,81 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textHome;
+  public final Button button0;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textHome) {
+  @NonNull
+  public final Button button1;
+
+  @NonNull
+  public final Button button2;
+
+  @NonNull
+  public final Button button3;
+
+  @NonNull
+  public final Button button4;
+
+  @NonNull
+  public final Button button5;
+
+  @NonNull
+  public final Button button6;
+
+  @NonNull
+  public final Button button7;
+
+  @NonNull
+  public final Button button8;
+
+  @NonNull
+  public final Button button9;
+
+  @NonNull
+  public final Button buttonAdd;
+
+  @NonNull
+  public final Button buttonClear;
+
+  @NonNull
+  public final Button buttonDivide;
+
+  @NonNull
+  public final Button buttonEquals;
+
+  @NonNull
+  public final Button buttonMultiply;
+
+  @NonNull
+  public final Button buttonSubtract;
+
+  @NonNull
+  public final TextView resultTextView;
+
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull Button button0,
+      @NonNull Button button1, @NonNull Button button2, @NonNull Button button3,
+      @NonNull Button button4, @NonNull Button button5, @NonNull Button button6,
+      @NonNull Button button7, @NonNull Button button8, @NonNull Button button9,
+      @NonNull Button buttonAdd, @NonNull Button buttonClear, @NonNull Button buttonDivide,
+      @NonNull Button buttonEquals, @NonNull Button buttonMultiply, @NonNull Button buttonSubtract,
+      @NonNull TextView resultTextView) {
     this.rootView = rootView;
-    this.textHome = textHome;
+    this.button0 = button0;
+    this.button1 = button1;
+    this.button2 = button2;
+    this.button3 = button3;
+    this.button4 = button4;
+    this.button5 = button5;
+    this.button6 = button6;
+    this.button7 = button7;
+    this.button8 = button8;
+    this.button9 = button9;
+    this.buttonAdd = buttonAdd;
+    this.buttonClear = buttonClear;
+    this.buttonDivide = buttonDivide;
+    this.buttonEquals = buttonEquals;
+    this.buttonMultiply = buttonMultiply;
+    this.buttonSubtract = buttonSubtract;
+    this.resultTextView = resultTextView;
   }
 
   @Override
@@ -54,13 +125,111 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_home;
-      TextView textHome = ViewBindings.findChildViewById(rootView, id);
-      if (textHome == null) {
+      id = R.id.button0;
+      Button button0 = ViewBindings.findChildViewById(rootView, id);
+      if (button0 == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, textHome);
+      id = R.id.button1;
+      Button button1 = ViewBindings.findChildViewById(rootView, id);
+      if (button1 == null) {
+        break missingId;
+      }
+
+      id = R.id.button2;
+      Button button2 = ViewBindings.findChildViewById(rootView, id);
+      if (button2 == null) {
+        break missingId;
+      }
+
+      id = R.id.button3;
+      Button button3 = ViewBindings.findChildViewById(rootView, id);
+      if (button3 == null) {
+        break missingId;
+      }
+
+      id = R.id.button4;
+      Button button4 = ViewBindings.findChildViewById(rootView, id);
+      if (button4 == null) {
+        break missingId;
+      }
+
+      id = R.id.button5;
+      Button button5 = ViewBindings.findChildViewById(rootView, id);
+      if (button5 == null) {
+        break missingId;
+      }
+
+      id = R.id.button6;
+      Button button6 = ViewBindings.findChildViewById(rootView, id);
+      if (button6 == null) {
+        break missingId;
+      }
+
+      id = R.id.button7;
+      Button button7 = ViewBindings.findChildViewById(rootView, id);
+      if (button7 == null) {
+        break missingId;
+      }
+
+      id = R.id.button8;
+      Button button8 = ViewBindings.findChildViewById(rootView, id);
+      if (button8 == null) {
+        break missingId;
+      }
+
+      id = R.id.button9;
+      Button button9 = ViewBindings.findChildViewById(rootView, id);
+      if (button9 == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonAdd;
+      Button buttonAdd = ViewBindings.findChildViewById(rootView, id);
+      if (buttonAdd == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonClear;
+      Button buttonClear = ViewBindings.findChildViewById(rootView, id);
+      if (buttonClear == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonDivide;
+      Button buttonDivide = ViewBindings.findChildViewById(rootView, id);
+      if (buttonDivide == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonEquals;
+      Button buttonEquals = ViewBindings.findChildViewById(rootView, id);
+      if (buttonEquals == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonMultiply;
+      Button buttonMultiply = ViewBindings.findChildViewById(rootView, id);
+      if (buttonMultiply == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonSubtract;
+      Button buttonSubtract = ViewBindings.findChildViewById(rootView, id);
+      if (buttonSubtract == null) {
+        break missingId;
+      }
+
+      id = R.id.resultTextView;
+      TextView resultTextView = ViewBindings.findChildViewById(rootView, id);
+      if (resultTextView == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((ConstraintLayout) rootView, button0, button1, button2,
+          button3, button4, button5, button6, button7, button8, button9, buttonAdd, buttonClear,
+          buttonDivide, buttonEquals, buttonMultiply, buttonSubtract, resultTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
