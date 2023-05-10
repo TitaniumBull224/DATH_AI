@@ -71,6 +71,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 string app_name
+string title_activity_mqttactivity
 string title_dashboard
 string title_home
 string title_notifications

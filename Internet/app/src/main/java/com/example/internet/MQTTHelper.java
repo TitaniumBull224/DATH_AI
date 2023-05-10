@@ -63,11 +63,9 @@ public class MQTTHelper {
         mqttConnectOptions.setPassword(password.toCharArray());
 
         try {
-
             mqttAndroidClient.connect(mqttConnectOptions, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-
                     DisconnectedBufferOptions disconnectedBufferOptions = new DisconnectedBufferOptions();
                     disconnectedBufferOptions.setBufferEnabled(true);
                     disconnectedBufferOptions.setBufferSize(100);
@@ -82,9 +80,7 @@ public class MQTTHelper {
                     Log.w("Mqtt", "Failed to connect to: " + serverUri + exception.toString());
                 }
             });
-
-
-        } catch (MqttException ex){
+        } catch (MqttException ex) {
             ex.printStackTrace();
         }
     }
@@ -105,10 +101,9 @@ public class MQTTHelper {
                 });
 
             } catch (MqttException ex) {
-                System.err.println("Exceptionst subscribing");
+                System.err.println("Exception subscribing");
                 ex.printStackTrace();
             }
         }
     }
-
 }
