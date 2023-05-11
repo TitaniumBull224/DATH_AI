@@ -1,26 +1,34 @@
 [
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/activity_main.xml",
-        "source": "com.example.internet.app-main-68:/layout/activity_main.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/activity_main.xml",
+        "source": "com.example.internet.app-main-69:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/activity_login.xml",
-        "source": "com.example.internet.app-main-68:/layout/activity_login.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/fragment_schedule.xml",
+        "source": "com.example.internet.app-main-69:/layout/fragment_schedule.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/fragment_dashboard.xml",
-        "source": "com.example.internet.app-main-68:/layout/fragment_dashboard.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/activity_login.xml",
+        "source": "com.example.internet.app-main-69:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/activity_signup.xml",
-        "source": "com.example.internet.app-main-68:/layout/activity_signup.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/fragment_home.xml",
+        "source": "com.example.internet.app-main-69:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/fragment_home.xml",
-        "source": "com.example.internet.app-main-68:/layout/fragment_home.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/fragment_notifications.xml",
+        "source": "com.example.internet.app-main-69:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "com.example.internet.app-mergeDebugResources-65:/layout/fragment_notifications.xml",
-        "source": "com.example.internet.app-main-68:/layout/fragment_notifications.xml"
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/activity_signup.xml",
+        "source": "com.example.internet.app-main-69:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/fragment_profile.xml",
+        "source": "com.example.internet.app-main-69:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.internet.app-mergeDebugResources-66:/layout/fragment_dashboard.xml",
+        "source": "com.example.internet.app-main-69:/layout/fragment_dashboard.xml"
     }
 ]

@@ -27,9 +27,6 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final LabeledSwitch ligBtn;
 
   @NonNull
-  public final TextView textDashboard;
-
-  @NonNull
   public final TextView txtHum;
 
   @NonNull
@@ -39,12 +36,11 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final TextView txtTem;
 
   private FragmentDashboardBinding(@NonNull LinearLayout rootView, @NonNull LabeledSwitch fanBtn,
-      @NonNull LabeledSwitch ligBtn, @NonNull TextView textDashboard, @NonNull TextView txtHum,
-      @NonNull TextView txtLig, @NonNull TextView txtTem) {
+      @NonNull LabeledSwitch ligBtn, @NonNull TextView txtHum, @NonNull TextView txtLig,
+      @NonNull TextView txtTem) {
     this.rootView = rootView;
     this.fanBtn = fanBtn;
     this.ligBtn = ligBtn;
-    this.textDashboard = textDashboard;
     this.txtHum = txtHum;
     this.txtLig = txtLig;
     this.txtTem = txtTem;
@@ -89,12 +85,6 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.text_dashboard;
-      TextView textDashboard = ViewBindings.findChildViewById(rootView, id);
-      if (textDashboard == null) {
-        break missingId;
-      }
-
       id = R.id.txtHum;
       TextView txtHum = ViewBindings.findChildViewById(rootView, id);
       if (txtHum == null) {
@@ -113,8 +103,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((LinearLayout) rootView, fanBtn, ligBtn, textDashboard,
-          txtHum, txtLig, txtTem);
+      return new FragmentDashboardBinding((LinearLayout) rootView, fanBtn, ligBtn, txtHum, txtLig,
+          txtTem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

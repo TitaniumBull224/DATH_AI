@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.internet.app-mergeDebugResources-64:/values-es-rUS/values-es-rUS.xml",
+            "outputFile": "com.example.internet.app-mergeDebugResources-65:/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\NITRO 5\\.gradle\\caches\\transforms-3\\a05ba4668bbfc77c305bc10478715b27\\transformed\\jetified-material3-1.0.0\\res\\values-es-rUS\\values-es-rUS.xml",

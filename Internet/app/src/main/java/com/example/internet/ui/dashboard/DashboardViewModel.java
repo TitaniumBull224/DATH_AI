@@ -19,29 +19,20 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class DashboardViewModel extends ViewModel {
-
-    private final MutableLiveData<String> mText;
     private final MutableLiveData<String> temperature, humidity, light;
     private final MutableLiveData<String> ligBtn, fanBtn;
     MQTTHelper mqttHelper;
 
 
     public DashboardViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
         temperature = new MutableLiveData<>("");
         humidity  = new MutableLiveData<>("");
         light = new MutableLiveData<>("");
 
         ligBtn = new MutableLiveData<>("0");
         fanBtn = new MutableLiveData<>("0");
-
-
     }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
     public LiveData<String> getTem() { return temperature;}
     public LiveData<String> getHum() { return humidity;}
     public LiveData<String> getLig() { return light;}
