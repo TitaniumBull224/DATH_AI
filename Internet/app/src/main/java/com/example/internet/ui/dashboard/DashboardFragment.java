@@ -31,12 +31,11 @@ public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
     private MqttAndroidClient mqttAndroidClient;
-    public final String[] arrayFeeds = {"/den", "/quat", "/nhietdo", "/doam", "/anhsang"};
+    public final String[] arrayFeeds = { "/feeds/nhietdo", "/feeds/doam", "/feeds/anhsang", "/feeds/den", "/feeds/quat" };
     private final String serverUri = "tcp://io.adafruit.com:1883";
-    private final String clientId = MqttClient.generateClientId();
+    private final String clientId = "95468879";
     private final String username = "nhanchucqt";
-    private final String password = "aio_wonu99yLeD27iipmLowM9FqyhZL1";
-    // Add a field for the DashboardViewModel instance
+    private final String password = "aio_fhFH288kPEAxVDqKBP3cfppuVMTI";
     private DashboardViewModel dashboardViewModel;
 
     @Override
@@ -59,43 +58,6 @@ public class DashboardFragment extends Fragment {
 
         dashboardViewModel.getLig().observe(getViewLifecycleOwner(), value -> binding.txtLig.setText(value));
 
-        // Set up MQTT connection
-        mqttAndroidClient = new MqttAndroidClient(getContext(), serverUri, clientId);
-        mqttAndroidClient.setCallback(new MqttCallbackExtended() {
-            @Override
-            public void connectComplete(boolean reconnect, String serverURI) {
-                // Subscribe to topics
-                try {
-                    mqttAndroidClient.subscribe(username + arrayFeeds[0], 0, (topic, message) -> dashboardViewModel.setTem(new String(message.getPayload())));
-                    mqttAndroidClient.subscribe(username + arrayFeeds[1], 0, (topic, message) -> dashboardViewModel.setHum(new String(message.getPayload())));
-                    mqttAndroidClient.subscribe(username + arrayFeeds[2], 0, (topic, message) -> dashboardViewModel.setLig(new String(message.getPayload())));
-                } catch (MqttException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void connectionLost(Throwable cause) {
-                try {
-                    mqttAndroidClient.connect(mqttConnectOptions);
-                } catch (MqttException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void messageArrived(String topic, MqttMessage message) throws Exception {}
-
-            @Override
-            public void deliveryComplete(IMqttDeliveryToken token) {}
-        });
-
-        try {
-            mqttAndroidClient.connect(mqttConnectOptions);
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-
         // Set up toggle switches
         LabeledSwitch lightSwitch = binding.ligBtn;
         lightSwitch.setOnToggledListener((toggleableView, isOn) -> {
@@ -116,6 +78,56 @@ public class DashboardFragment extends Fragment {
                 e.printStackTrace();
             }
         });
+
+        // Set up MQTT connection
+        mqttAndroidClient = new MqttAndroidClient(getContext(), serverUri, clientId);
+        mqttAndroidClient.setCallback(new MqttCallbackExtended() {
+            @Override
+            public void connectComplete(boolean reconnect, String serverURI) {
+                // Subscribe to topics
+                try {
+                    mqttAndroidClient.subscribe(username + arrayFeeds[0], 0, (topic, message) -> dashboardViewModel.setTem(new String(message.getPayload())));
+                    mqttAndroidClient.subscribe(username + arrayFeeds[1], 0, (topic, message) -> dashboardViewModel.setHum(new String(message.getPayload())));
+                    mqttAndroidClient.subscribe(username + arrayFeeds[2], 0, (topic, message) -> dashboardViewModel.setLig(new String(message.getPayload())));
+                    mqttAndroidClient.subscribe(username + arrayFeeds[3], 0, (topic, message) -> {
+                        String payload = new String(message.getPayload());
+                        boolean isOn = payload.equals("1");
+                        lightSwitch.setOn(isOn);
+                    });
+                    mqttAndroidClient.subscribe(username + arrayFeeds[4], 0, (topic, message) -> {
+                        String payload = new String(message.getPayload());
+                        boolean isOn = payload.equals("1");
+                        fanSwitch.setOn(isOn);
+                    });
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void connectionLost(Throwable cause) {
+                Log.e("MQTT", "Connection to Adafruit server lost", cause);
+                try {
+                    mqttAndroidClient.connect(mqttConnectOptions);
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void messageArrived(String topic, MqttMessage message) throws Exception {}
+
+            @Override
+            public void deliveryComplete(IMqttDeliveryToken token) {}
+        });
+
+        try {
+            mqttAndroidClient.connect(mqttConnectOptions);
+        } catch (MqttException e) {
+            Log.e("MQTT", "Error connecting to Adafruit server", e);
+        }
+
+
 
         return root;
     }

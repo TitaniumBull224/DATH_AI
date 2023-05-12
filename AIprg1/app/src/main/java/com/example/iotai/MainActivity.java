@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         ligBtn.setOnToggledListener(new OnToggledListener() {
             @Override
             public void onSwitched(ToggleableView toggleableView, boolean isOn) {
-                if(isOn == true) sendDataMQTT("nhanchucqt/feeds/den", "1");
+                if(isOn) sendDataMQTT("nhanchucqt/feeds/den", "1");
                 else sendDataMQTT("nhanchucqt/feeds/den", "0");
             }
         });
         fanBtn.setOnToggledListener(new OnToggledListener() {
             @Override
             public void onSwitched(ToggleableView toggleableView, boolean isOn) {
-                if(isOn == true) sendDataMQTT("nhanchucqt/feeds/quat", "1");
+                if(isOn) sendDataMQTT("nhanchucqt/feeds/quat", "1");
                 else sendDataMQTT("nhanchucqt/feeds/quat", "0");
             }
         });
@@ -100,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(topic.contains("quat"))
                 {
-                    if(message.toString().equals("1")){ligBtn.setOn(true);}
-                    if(message.toString().equals("0")){ligBtn.setOn(false);}
+                    if(message.toString().equals("1")){fanBtn.setOn(true);}
+                    if(message.toString().equals("0")){fanBtn.setOn(false);}
                 }
             }
 
