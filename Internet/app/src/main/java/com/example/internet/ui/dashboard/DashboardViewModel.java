@@ -19,91 +19,26 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class DashboardViewModel extends ViewModel {
-    private final MutableLiveData<String> temperature, humidity, light;
-    private final MutableLiveData<String> ligBtn, fanBtn;
+    private final MutableLiveData<String> temperature = new MutableLiveData<>();
+    private final MutableLiveData<String> humidity = new MutableLiveData<>();
+    private final MutableLiveData<String> light = new MutableLiveData<>();
+    //private final MutableLiveData<String> lightBtn = new MutableLiveData<>();
+    //private final MutableLiveData<String> fanBtn = new MutableLiveData<>();
+
     MQTTHelper mqttHelper;
 
 
-    public DashboardViewModel() {
-        temperature = new MutableLiveData<>("");
-        humidity  = new MutableLiveData<>("");
-        light = new MutableLiveData<>("");
+    public LiveData<String> getTem() { return temperature; }
+    public LiveData<String> getHum() { return humidity; }
+    public LiveData<String> getLig() { return light; }
+    //public LiveData<String> getLigBtn() { return lightBtn; }
+    //public LiveData<String> getFanBtn() { return fanBtn; }
 
-        ligBtn = new MutableLiveData<>("0");
-        fanBtn = new MutableLiveData<>("0");
-    }
+    public void setTem(String value) { temperature.setValue(value); }
+    public void setHum(String value) { humidity.setValue(value); }
+    public void setLig(String value) { light.setValue(value); }
 
-    public LiveData<String> getTem() { return temperature;}
-    public LiveData<String> getHum() { return humidity;}
-    public LiveData<String> getLig() { return light;}
-    //public LiveData<String> getLigBtn() { return ligBtn;}
-    //public LiveData<String> getFanBtn() { return fanBtn;}
-
-    public void sendDataMQTT(String topic, String value){
-        MqttMessage msg = new MqttMessage();
-        msg.setId(123234);
-        msg.setQos(0);
-        msg.setRetained(false);
-
-        byte[] b = value.getBytes(StandardCharsets.UTF_8);
-        msg.setPayload(b);
-
-        try {
-            mqttHelper.mqttAndroidClient.publish(topic, msg);
-        } catch (MqttException e) {
-
-        }
-    }
-
-    public void startMQTT(Context context){
-        mqttHelper = new MQTTHelper(context);
-        mqttHelper.setCallback(new MqttCallbackExtended() {
-
-            @Override
-            public void connectComplete(boolean reconnect, String serverURI) {
-
-            }
-
-            @Override
-            public void connectionLost(Throwable cause) {
-
-            }
-
-            @Override
-            public void messageArrived(String topic, MqttMessage message) throws Exception {
-                Log.d("TEST", topic + "***" + message);
-                if (topic.contains("nhietdo")) {
-                    temperature.setValue(message + "°C");
-                }
-                else if (topic.contains("doam"))  {
-                    humidity.setValue(message + "%");
-                }
-                else if (topic.contains("anhsang")) {
-                    light.setValue(message + "LX");
-                }
-                else if (topic.contains("den")) {
-                    if(message.toString().equals("1")) {ligBtn.setValue("1");}
-                    if(message.toString().equals("0")) {ligBtn.setValue("0");}
-                }
-                else if (topic.contains("quat")) {
-                    if(message.toString().equals("1")) {fanBtn.setValue("1");}
-                    if(message.toString().equals("0")) {fanBtn.setValue("0");}
-                }
-            }
-
-            @Override
-            public void deliveryComplete(IMqttDeliveryToken token) {
-
-            }
-
-        });
-    }
-    /*public void clear() {
-        temperature.setValue("");
-        humidity.setValue("");
-        light.setValue("");
-        ligBtn.setValue("");
-        fanBtn.setValue("");
-    }*/
+    //public void setLightBtn(String lB) { lightBtn.setValue(lB); }
+    //public void setFanBtn(String fB) { fanBtn.setValue(fB); }
 
 }

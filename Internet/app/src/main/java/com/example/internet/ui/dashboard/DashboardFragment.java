@@ -1,6 +1,7 @@
 package com.example.internet.ui.dashboard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +17,26 @@ import com.github.angads25.toggle.interfaces.OnToggledListener;
 import com.github.angads25.toggle.model.ToggleableView;
 import com.github.angads25.toggle.widget.LabeledSwitch;
 
+// Add the necessary imports for MQTT
+import org.eclipse.paho.android.service.MqttAndroidClient;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.IMqttMessageListener;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
+    private MqttAndroidClient mqttAndroidClient;
+    public final String[] arrayFeeds = {"/den", "/quat", "/nhietdo", "/doam", "/anhsang"};
+    private final String serverUri = "tcp://io.adafruit.com:1883";
+    private final String clientId = MqttClient.generateClientId();
+    private final String username = "nhanchucqt";
+    private final String password = "aio_wonu99yLeD27iipmLowM9FqyhZL1";
+    // Add a field for the DashboardViewModel instance
     private DashboardViewModel dashboardViewModel;
 
     @Override
@@ -29,24 +47,75 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textTem = binding.txtTem;
-        dashboardViewModel.getTem().observe(getViewLifecycleOwner(), textTem::setText);
-        final TextView textHum = binding.txtHum;
-        dashboardViewModel.getHum().observe(getViewLifecycleOwner(), textHum::setText);
-        final TextView textLig = binding.txtLig;
-        dashboardViewModel.getLig().observe(getViewLifecycleOwner(), textLig::setText);
+        MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
+        mqttConnectOptions.setAutomaticReconnect(true);
+        mqttConnectOptions.setCleanSession(false);
+        mqttConnectOptions.setUserName(username);
+        mqttConnectOptions.setPassword(password.toCharArray());
 
-        //final LabeledSwitch switchLig = binding.ligBtn;
-        //dashboardViewModel.getLigBtn().observe(getViewLifecycleOwner(), switchLig::setText);
-        binding.ligBtn.setOnToggledListener((toggleableView, isOn) -> {
-            if(isOn) dashboardViewModel.sendDataMQTT("nhanchucqt/feeds/den", "1");
-            else dashboardViewModel.sendDataMQTT("nhanchucqt/feeds/den", "0");
+        dashboardViewModel.getTem().observe(getViewLifecycleOwner(), value -> binding.txtTem.setText(value));
+
+        dashboardViewModel.getHum().observe(getViewLifecycleOwner(), value -> binding.txtHum.setText(value));
+
+        dashboardViewModel.getLig().observe(getViewLifecycleOwner(), value -> binding.txtLig.setText(value));
+
+        // Set up MQTT connection
+        mqttAndroidClient = new MqttAndroidClient(getContext(), serverUri, clientId);
+        mqttAndroidClient.setCallback(new MqttCallbackExtended() {
+            @Override
+            public void connectComplete(boolean reconnect, String serverURI) {
+                // Subscribe to topics
+                try {
+                    mqttAndroidClient.subscribe(username + arrayFeeds[0], 0, (topic, message) -> dashboardViewModel.setTem(new String(message.getPayload())));
+                    mqttAndroidClient.subscribe(username + arrayFeeds[1], 0, (topic, message) -> dashboardViewModel.setHum(new String(message.getPayload())));
+                    mqttAndroidClient.subscribe(username + arrayFeeds[2], 0, (topic, message) -> dashboardViewModel.setLig(new String(message.getPayload())));
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void connectionLost(Throwable cause) {
+                try {
+                    mqttAndroidClient.connect(mqttConnectOptions);
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void messageArrived(String topic, MqttMessage message) throws Exception {}
+
+            @Override
+            public void deliveryComplete(IMqttDeliveryToken token) {}
         });
-        binding.fanBtn.setOnToggledListener((toggleableView, isOn) -> {
-            if(isOn) dashboardViewModel.sendDataMQTT("nhanchucqt/feeds/quat", "1");
-            else dashboardViewModel.sendDataMQTT("nhanchucqt/feeds/quat", "0");
+
+        try {
+            mqttAndroidClient.connect(mqttConnectOptions);
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+
+        // Set up toggle switches
+        LabeledSwitch lightSwitch = binding.ligBtn;
+        lightSwitch.setOnToggledListener((toggleableView, isOn) -> {
+            String payload = isOn ? "1" : "0";
+            try {
+                mqttAndroidClient.publish(username + arrayFeeds[3], new MqttMessage(payload.getBytes()));
+            } catch (MqttException e) {
+                e.printStackTrace();
+            }
         });
-        dashboardViewModel.startMQTT(getActivity());
+
+        LabeledSwitch fanSwitch = binding.fanBtn;
+        fanSwitch.setOnToggledListener((toggleableView, isOn) -> {
+            String payload = isOn ? "1" : "0";
+            try {
+                mqttAndroidClient.publish(username + arrayFeeds[4], new MqttMessage(payload.getBytes()));
+            } catch (MqttException e) {
+                e.printStackTrace();
+            }
+        });
 
         return root;
     }
