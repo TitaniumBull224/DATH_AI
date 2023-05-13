@@ -30,5 +30,5 @@
         android:id="@+id/navigation_schedule"
         android:name="com.example.internet.ui.schedule.ScheduleFragment"
         android:label="@string/title_schedule"
-        tools:layout="@layout/fragment_schedule" />
+        tools:layout="@layout/schedule_rows" />
 </navigation>

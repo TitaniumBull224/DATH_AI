@@ -3238,17 +3238,23 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id createButton
 id currentState
 id custom
 id customPanel
 id cut
+id dateBeginEditText
+id dateEndEditText
 id date_picker_actions
+id datesTextView
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionEditText
+id descriptionTextView
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3416,6 +3422,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameEditText
+id nameTextView
 id nav_controller_view_tag
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
@@ -3483,6 +3491,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id schedulesListView
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3594,6 +3603,8 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timesEditText
+id timesTextView
 id title
 id titleDividerNoCustom
 id title_template
@@ -3840,6 +3851,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout schedule_rows
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
