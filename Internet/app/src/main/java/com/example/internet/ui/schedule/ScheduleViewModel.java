@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ScheduleViewModel extends AndroidViewModel {
     private final MutableLiveData<List<Schedule>> schedules;
@@ -45,6 +46,18 @@ public class ScheduleViewModel extends AndroidViewModel {
             List<Schedule> schedulesFromDB = scheduleDatabaseHelper.getSchedules();
             schedules.postValue(schedulesFromDB);
         }).start();
+    }
+
+    public LiveData<List<Schedule>> getSchedulesByDate(String date) {
+        MutableLiveData<List<Schedule>> filteredSchedules = new MutableLiveData<>();
+        new Thread(() -> {
+            List<Schedule> schedulesFromDB = scheduleDatabaseHelper.getSchedules();
+            List<Schedule> filteredList = schedulesFromDB.stream()
+                    .filter(schedule -> schedule.getDateBegin().compareTo(date) <= 0 && schedule.getDateEnd().compareTo(date) >= 0)
+                    .collect(Collectors.toList());
+            filteredSchedules.postValue(filteredList);
+        }).start();
+        return filteredSchedules;
     }
 
 }
