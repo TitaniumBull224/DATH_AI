@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/updateNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/schedule_name" />
+
+    <EditText
+        android:id="@+id/updateDateBeginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/schedule_date_begin" />
+
+    <EditText
+        android:id="@+id/updateDateEndEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/schedule_date_end" />
+
+    <EditText
+        android:id="@+id/updateTimesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/schedule_times" />
+
+    <EditText
+        android:id="@+id/updateDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/schedule_description" />
+
+    <Button
+        android:id="@+id/submitUpdateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_btn" />
+
+</LinearLayout>

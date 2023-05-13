@@ -5,5 +5,13 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_schedule">Schedule</string>
     <string name="title_profile">Profile</string>
-    <string name="title_activity_mqttactivity">MQTTActivity</string>
+    <string name="schedule_name">Name</string>
+    <string name="schedule_date_begin">Date Begin</string>
+    <string name="schedule_date_end">Date End</string>
+    <string name="schedule_times">Times</string>
+    <string name="schedule_description">Description</string>
+    <string name="create_btn">Create</string>
+    <string name="delete_btn">Delete</string>
+    <string name="update_btn">Update</string>
+    <string name="submit_btn">Submit</string>
 </resources>

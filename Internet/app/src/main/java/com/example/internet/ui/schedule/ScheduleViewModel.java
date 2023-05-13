@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 public class ScheduleViewModel extends AndroidViewModel {
-    private MutableLiveData<List<Schedule>> schedules;
-    private ScheduleDatabaseHelper scheduleDatabaseHelper;
+    private final MutableLiveData<List<Schedule>> schedules;
+    private final ScheduleDatabaseHelper scheduleDatabaseHelper;
 
 
     public ScheduleViewModel(Application application) {

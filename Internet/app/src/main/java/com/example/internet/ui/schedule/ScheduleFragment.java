@@ -33,7 +33,7 @@ public class ScheduleFragment extends Fragment {
         binding = FragmentScheduleBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        adapter = new ScheduleAdapter(new ArrayList<>());
+        adapter = new ScheduleAdapter(scheduleViewModel, new ArrayList<>());
         binding.schedulesListView.setAdapter(adapter);
 
         scheduleViewModel.getSchedules().observe(getViewLifecycleOwner(), schedules -> {

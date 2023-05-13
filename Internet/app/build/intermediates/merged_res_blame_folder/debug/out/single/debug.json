@@ -16,6 +16,10 @@
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-69:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-67:\\layout_schedule_rows.xml.flat",
+        "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-69:\\layout\\schedule_rows.xml"
+    },
+    {
         "merged": "com.example.internet.app-merged_res-67:/layout_fragment_schedule.xml.flat",
         "source": "com.example.internet.app-main-69:/layout/fragment_schedule.xml"
     },
@@ -88,16 +92,16 @@
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-69:\\layout\\fragment_profile.xml"
     },
     {
+        "merged": "com.example.internet.app-merged_res-67:/layout_update_schedule.xml.flat",
+        "source": "com.example.internet.app-main-69:/layout/update_schedule.xml"
+    },
+    {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-67:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-main-69:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "com.example.internet.app-merged_res-67:/layout_schedule_rows.xml.flat",
         "source": "com.example.internet.app-main-69:/layout/schedule_rows.xml"
-    },
-    {
-        "merged": "com.example.internet.app-merged_res-67:/navigation_mobile_navigation.xml.flat",
-        "source": "com.example.internet.app-main-69:/navigation/mobile_navigation.xml"
     },
     {
         "merged": "C:\\Users\\NITRO 5\\.gradle\\daemon\\8.0\\com.example.internet.app-merged_res-67:\\drawable_ic_profile_black_24dp.xml.flat",
