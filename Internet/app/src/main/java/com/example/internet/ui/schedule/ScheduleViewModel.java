@@ -2,17 +2,20 @@ package com.example.internet.ui.schedule;
 
 import android.app.Application;
 
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-public class ScheduleViewModel extends ViewModel {
+public class ScheduleViewModel extends AndroidViewModel {
     private MutableLiveData<List<Schedule>> schedules;
     private ScheduleDatabaseHelper scheduleDatabaseHelper;
 
+
     public ScheduleViewModel(Application application) {
+        super(application);
         schedules = new MutableLiveData<>();
         scheduleDatabaseHelper = new ScheduleDatabaseHelper(application);
         loadSchedules();
@@ -38,6 +41,10 @@ public class ScheduleViewModel extends ViewModel {
     }
 
     private void loadSchedules() {
-        schedules.setValue(scheduleDatabaseHelper.getSchedules());
+        new Thread(() -> {
+            List<Schedule> schedulesFromDB = scheduleDatabaseHelper.getSchedules();
+            schedules.postValue(schedulesFromDB);
+        }).start();
     }
+
 }
