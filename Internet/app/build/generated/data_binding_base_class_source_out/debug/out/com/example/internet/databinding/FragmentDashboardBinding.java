@@ -27,6 +27,21 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final LabeledSwitch ligBtn;
 
   @NonNull
+  public final TextView textView;
+
+  @NonNull
+  public final TextView textView1;
+
+  @NonNull
+  public final TextView textView2;
+
+  @NonNull
+  public final TextView textView3;
+
+  @NonNull
+  public final TextView textView4;
+
+  @NonNull
   public final TextView txtHum;
 
   @NonNull
@@ -36,11 +51,17 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final TextView txtTem;
 
   private FragmentDashboardBinding(@NonNull LinearLayout rootView, @NonNull LabeledSwitch fanBtn,
-      @NonNull LabeledSwitch ligBtn, @NonNull TextView txtHum, @NonNull TextView txtLig,
-      @NonNull TextView txtTem) {
+      @NonNull LabeledSwitch ligBtn, @NonNull TextView textView, @NonNull TextView textView1,
+      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView4,
+      @NonNull TextView txtHum, @NonNull TextView txtLig, @NonNull TextView txtTem) {
     this.rootView = rootView;
     this.fanBtn = fanBtn;
     this.ligBtn = ligBtn;
+    this.textView = textView;
+    this.textView1 = textView1;
+    this.textView2 = textView2;
+    this.textView3 = textView3;
+    this.textView4 = textView4;
     this.txtHum = txtHum;
     this.txtLig = txtLig;
     this.txtTem = txtTem;
@@ -85,6 +106,36 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      id = R.id.textView1;
+      TextView textView1 = ViewBindings.findChildViewById(rootView, id);
+      if (textView1 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView4;
+      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
+      if (textView4 == null) {
+        break missingId;
+      }
+
       id = R.id.txtHum;
       TextView txtHum = ViewBindings.findChildViewById(rootView, id);
       if (txtHum == null) {
@@ -103,8 +154,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((LinearLayout) rootView, fanBtn, ligBtn, txtHum, txtLig,
-          txtTem);
+      return new FragmentDashboardBinding((LinearLayout) rootView, fanBtn, ligBtn, textView,
+          textView1, textView2, textView3, textView4, txtHum, txtLig, txtTem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

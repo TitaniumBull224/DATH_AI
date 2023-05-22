@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/C:/Users/NITRO%205/AppData/Local/Android/Sdk/icons/material/materialicons/schedule/baseline_schedule_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../../Android/Sdk/icons/material/materialicons/create/baseline_create_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,7 +33,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_schedule_black_24dp" />
+                            <entry key="outputName" value="ic_baseline_update_25" />
                             <entry key="sourceFile" value="D:\Program\XAMPP\htdocs\DATH_AI\Internet" />
                           </map>
                         </option>

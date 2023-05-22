@@ -35,7 +35,7 @@ public class DashboardFragment extends Fragment {
     private final String serverUri = "tcp://io.adafruit.com:1883";
     private final String clientId = "95468879";
     private final String username = "nhanchucqt";
-    private final String password = "aio_fhFH288kPEAxVDqKBP3cfppuVMTI";
+    private final String password = "aio_GTvf53NrJNbco4Knw3IvBKIBOdwI";
     private DashboardViewModel dashboardViewModel;
 
     @Override

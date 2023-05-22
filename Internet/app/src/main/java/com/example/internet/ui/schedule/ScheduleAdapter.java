@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.internet.R;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class ScheduleAdapter extends BaseAdapter {
     private List<Schedule> schedules;
-    private ScheduleViewModel scheduleViewModel;
+    private final ScheduleViewModel scheduleViewModel;
     public ScheduleAdapter(ScheduleViewModel scheduleViewModel, List<Schedule> schedules) {
         this.scheduleViewModel = scheduleViewModel;
         this.schedules = schedules;
@@ -54,13 +55,13 @@ public class ScheduleAdapter extends BaseAdapter {
         datesTextView.setText(String.format("%s - %s", schedule.getDateBegin(), schedule.getDateEnd()));
         timesTextView.setText(schedule.getTimes());
         descriptionTextView.setText(schedule.getDescription());
-        Button deleteButton = convertView.findViewById(R.id.deleteButton);
+        ImageButton deleteButton = convertView.findViewById(R.id.deleteButton);
         deleteButton.setOnClickListener(v -> {
             schedules.remove(schedule);
             notifyDataSetChanged();
             scheduleViewModel.deleteSchedule(schedule);
         });
-        Button updateButton = convertView.findViewById(R.id.updateButton);
+        ImageButton updateButton = convertView.findViewById(R.id.updateButton);
         updateButton.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(parent.getContext());
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.update_schedule, null);

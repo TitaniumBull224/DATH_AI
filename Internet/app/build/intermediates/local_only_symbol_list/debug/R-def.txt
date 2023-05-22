@@ -13,6 +13,9 @@ color white
 color yellow
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+drawable hum_bg
+drawable ic_baseline_delete_25
+drawable ic_baseline_update_25
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
 drawable ic_launcher_background
@@ -20,6 +23,9 @@ drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
 drawable ic_profile_black_24dp
 drawable ic_schedule_black_24dp
+drawable lig_bg
+drawable profile_picture
+drawable temp_bg
 id button0
 id button1
 id button2
@@ -45,6 +51,7 @@ id deleteButton
 id descriptionEditText
 id descriptionTextView
 id fanBtn
+id greeting_text
 id ligBtn
 id loginRedirectText
 id login_button
@@ -59,6 +66,7 @@ id navigation_home
 id navigation_notifications
 id navigation_profile
 id navigation_schedule
+id profile_picture
 id resultTextView
 id schedulesListView
 id signupRedirectText
@@ -67,6 +75,11 @@ id signup_confirm
 id signup_email
 id signup_password
 id submitUpdateButton
+id textView
+id textView1
+id textView2
+id textView3
+id textView4
 id text_notifications
 id timesEditText
 id timesTextView
